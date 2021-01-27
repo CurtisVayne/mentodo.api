@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Mentodo.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Mentodo.Api.Controllers.TodoController">
+            <summary>
+            The Controller for Api endpoints of the Todo items 
+            </summary>
+        </member>
+        <member name="M:Mentodo.Api.Controllers.TodoController.#ctor(Mentodo.Api.Data.ApiContext)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Mentodo.Api.Controllers.TodoController.Index">
+            <summary>
+            List of Todo items
+            </summary>
+            <example>
+            GET http://url/todo
+            </example>
+            <returns></returns>
+        </member>
+        <member name="M:Mentodo.Api.Controllers.TodoController.Get(System.Int32)">
+            <summary>
+            Returns a single todo item
+            </summary>
+            <example>
+            GET http://url/todo/123
+            </example>
+            <param name="id">The id of the item</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mentodo.Api.Controllers.TodoController.Delete(System.Int32)">
+            <summary>
+            Delete a todo item by id
+            </summary>
+            <example>
+            DELETE http://url/todo/123
+            </example>
+            <param name="id">The id of the item to be deleted</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mentodo.Api.Controllers.TodoController.Save(Mentodo.Api.Model.Todo)">
+            <summary>
+            Saves a todo item into the DB
+            </summary>
+            POST http://url/todo (item)
+            <param name="item">The todo item to save</param>
+            <returns></returns>
+        </member>
+        <member name="P:Mentodo.Api.Model.Todo.id">
+            <summary>
+            the id of the item
+            </summary>
+        </member>
+        <member name="P:Mentodo.Api.Model.Todo.done">
+            <summary>
+            task done flag
+            </summary>
+        </member>
+        <member name="P:Mentodo.Api.Model.Todo.info">
+            <summary>
+            the task todo :-)
+            </summary>
+        </member>
+        <member name="P:Mentodo.Api.Model.Todo.priority">
+            <summary>
+            task priority
+            </summary>
+        </member>
+        <member name="T:Mentodo.Api.ViewModels.ApiResponse">
+            <summary>
+            The generic API response model
+            </summary>
+        </member>
+        <member name="P:Mentodo.Api.ViewModels.ApiResponse.success">
+            <summary>
+            operation result
+            </summary>
+        </member>
+        <member name="P:Mentodo.Api.ViewModels.ApiResponse.message">
+            <summary>
+            operation result message
+            </summary>
+            <remarks>This field can contain message in all cases (success or false)</remarks>
+        </member>
+        <member name="P:Mentodo.Api.ViewModels.ApiResponse.id">
+            <summary>
+            during save, this will contain the saved item id
+            </summary>
+            <remarks>This is usefull during "add" operation, 
+            because the client can highlight the newly added item</remarks>
+        </member>
+    </members>
+</doc>
